@@ -83,27 +83,31 @@ header {
   margin: auto;
 }
 
-.news-header {
+.tintuc-dau {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.news-header h2 {
+.tintuc-dau h2 {
   font-size: 24px;
   color: #005baa;
 }
 
-.news-header .more {
+.tintuc-dau .xemthem {
   font-size: 14px;
   color: #005baa;
   text-decoration: none;
 }
 
-.news-container {
+.hop-tintuc {
   display: grid;
+  /* Tất cả các phần tử con trực tiếp của nó
+   trở thành các ô trong lưới. */
   grid-template-columns: repeat(4, 1fr);
+  /* Dùng để thiết lập chiều rộng cho các cột trong lưới.
+  Nghĩa là lặp lại 4 lần đơn vị 1fr → tạo ra 4 cột bằng nhau */
   gap: 20px;
 }
 
@@ -121,7 +125,7 @@ header {
 }
 
 .news-item ul {
-  list-style-type: square;
+  /* list-style-type: square; */
   padding-left: 20px;
   margin: 0;
 }
@@ -224,81 +228,4 @@ header {
 
 .xemthem a:hover {
   color: #005baa;
-}
-
-/* Footer */
-.footer {
-  background: #005baa;
-  color: white;
-  padding: 30px 20px 10px 20px;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.footer-column {
-  flex: 1;
-  min-width: 200px;
-}
-
-.footer-column h3 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  padding-bottom: 5px;
-}
-
-.footer-column p,
-.footer-column ul {
-  font-size: 14px;
-  margin: 5px 0;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin: 5px 0;
-}
-
-.footer-column ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-column ul li a:hover {
-  text-decoration: underline;
-}
-
-.social-icons {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0;
-}
-
-.social-icons img {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-}
-
-.counter p {
-  font-size: 13px;
-  margin: 2px 0;
-}
-
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  padding-top: 10px;
-  font-size: 13px;
-  line-height: 1.6;
 }

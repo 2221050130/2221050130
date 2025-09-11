@@ -1,0 +1,328 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+/* Toàn bộ app */
+.spotify-app {
+  display: grid;
+  grid-template-columns: 250px 1fr 300px; /* sidebar - main - rightbar */
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  gap: 10px; /* khoảng cách giữa các phần */
+  padding: 10px; /* viền ngoài */
+}
+
+/* Các khối chung (header, sidebar, main, rightbar) */
+.app-header,
+.sidebar,
+.main-content,
+.rightbar {
+  background-color: #121212;
+  border-radius: 10px;
+  padding: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Header */
+.app-header {
+  grid-column: 1 / span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #282828;
+}
+
+/* Ô tìm kiếm trên header */
+.global-search {
+  width: 40%;
+  max-width: 500px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #242424;
+  color: #fff;
+}
+.global-search::placeholder {
+  color: #b3b3b3;
+}
+.sidebar {
+  background-color: #1b1a1a;
+}
+.main-content {
+  background-color: #1b1a1a;
+}
+.rightbar {
+  background-color: #1b1a1a;
+}
+.app-header {
+  background-color: #1b1a1a;
+}
+/* Sidebar */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.sidebar-header h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.create-btn {
+  background: #1db954;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 12px;
+}
+.create-btn:hover {
+  background: #1ed760;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.tabs button {
+  background: #222;
+  border: none;
+  color: #b3b3b3;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.tabs button:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* Tools */
+.sidebar-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.search-box {
+  flex: 1;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+}
+.recents {
+  font-size: 12px;
+  color: #b3b3b3;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.recents:hover {
+  color: #fff;
+}
+
+/* Playlist items */
+.playlist-list {
+  list-style: none;
+}
+.playlist-list li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.playlist-list li:hover {
+  background: #1e1e1e;
+}
+.playlist-list img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.playlist-list .title {
+  font-size: 14px;
+  color: #fff;
+}
+.playlist-list .subtitle {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+/* Filter tabs */
+.filter-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.filter-tabs button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #2a2a2a;
+  color: #b3b3b3;
+  cursor: pointer;
+  font-size: 13px;
+}
+.filter-tabs button.active,
+.filter-tabs button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Horizontal scroll section */
+.horizontal-scroll {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+.horizontal-scroll::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+.horizontal-scroll .card {
+  min-width: 150px;
+  background: #181818;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+}
+.horizontal-scroll .card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* Section */
+.section {
+  margin-bottom: 30px;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.section-header h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.section-header a {
+  color: #b3b3b3;
+  font-size: 13px;
+  text-decoration: none;
+}
+.section-header a:hover {
+  text-decoration: underline;
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #181818;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.card:hover {
+  background: #282828;
+}
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.card h3 {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.card p {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+/* Rightbar */
+.rightbar h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.rightbar .cover {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+.switch-video button {
+  width: 100%;
+  background: #2a2a2a;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.switch-video button:hover {
+  background: #3a3a3a;
+}
+.track-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.track-info h4 .verified {
+  color: #1db954;
+  font-size: 14px;
+}
+.track-info p {
+  font-size: 13px;
+  color: #b3b3b3;
+  margin-top: 4px;
+}
+
+/* Thanh cuộn gọn gàng */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
