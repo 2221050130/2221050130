@@ -8,7 +8,13 @@
   </head>
   <body>
     <div class="spotify-app">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
       <header class="app-header">
+        <i class="fa-solid fa-house"></i>
+        <!-- Icon ngôi nhà -->
         <input
           type="text"
           placeholder="What do you want to play?"
@@ -74,6 +80,27 @@
                 <p class="subtitle">Hòa Minzy, Nguyễn Đăng Chung</p>
               </div>
             </li>
+            <li>
+              <img src="/spotify/ndghb.png" alt="" />
+              <div>
+                <p class="title">Nỗi đau giữa hòa bình</p>
+                <p class="subtitle">Hòa Minzy, Nguyễn Đăng Chung</p>
+              </div>
+            </li>
+            <li>
+              <img src="/spotify/ndghb.png" alt="" />
+              <div>
+                <p class="title">Nỗi đau giữa hòa bình</p>
+                <p class="subtitle">Hòa Minzy, Nguyễn Đăng Chung</p>
+              </div>
+            </li>
+            <li>
+              <img src="/spotify/ndghb.png" alt="" />
+              <div>
+                <p class="title">Nỗi đau giữa hòa bình</p>
+                <p class="subtitle">Hòa Minzy, Nguyễn Đăng Chung</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -89,20 +116,41 @@
           </div>
 
           <!-- Horizontal scroll playlists -->
-          <div class="horizontal-scroll">
-            <div class="card">
-              <img src="/spotify/pm.png" alt="Liked Songs" />
-              <p>Liked Songs</p>
+          <div class="horizontal-playlists">
+            <div class="playlist-card">
+              <img src="/spotify/pm.png" alt="Playlist cover" />
+              <span>Liked Song</span>
             </div>
-            <div class="card">
-              <img src="/spotify/pm.png" alt="Broken Heart" />
-              <p>Broken Heart</p>
+            <div class="playlist-card">
+              <img src="/spotify/pm.png" alt="Playlist cover" />
+              <span>Liked Song</span>
             </div>
-            <div class="card">
-              <img src="/spotify/pm.png" alt="Soft 10s" />
-              <p>Soft 10s</p>
+            <div class="playlist-card">
+              <img src="/spotify/pm.png" alt="Playlist cover" />
+              <span>Liked Song</span>
             </div>
-            <!-- thêm các card khác -->
+            <div class="playlist-card">
+              <img src="/spotify/pm.png" alt="Playlist cover" />
+              <span>Liked Song</span>
+            </div>
+            <div class="playlist-card">
+              <img src="/spotify/pm.png" alt="Playlist cover" />
+              <span>Liked Song</span>
+            </div>
+            <div class="playlist-card">
+              <img src="/spotify/pm.png" alt="Playlist cover" />
+              <span>Liked Song</span>
+            </div>
+            <div class="playlist-card">
+              <img src="/spotify/pm.png" alt="Playlist cover" />
+              <span>Liked Song</span>
+            </div>
+            <div class="playlist-card">
+              <img src="/spotify/pm.png" alt="Playlist cover" />
+              <span>Liked Song</span>
+            </div>
+
+            <!-- ... thêm nhiều playlist-card nữa -->
           </div>
 
           <!-- Section: Made For You -->
@@ -113,15 +161,26 @@
             </div>
             <div class="card-grid">
               <div class="card">
-                <img src="/spotify/dw.png" alt="Discover Weekly" />
-                <h3>Discover Weekly</h3>
-                <p>Your shortcut to hidden gems...</p>
+                <img src="/spotify/pm.png" alt="Discover Weekly" />
+                <h3>Phép màu</h3>
+                <p>Nguyễn Hùng</p>
               </div>
               <div class="card">
-                <img src="/spotify/01.png" alt="Daily Mix 1" />
-                <h3>Daily Mix 1</h3>
-                <p>Maroon 5, Taylor Swift...</p>
+                <img src="/spotify/pm.png" alt="Discover Weekly" />
+                <h3>Phép màu</h3>
+                <p>Nguyễn Hùng</p>
               </div>
+              <div class="card">
+                <img src="/spotify/pm.png" alt="Discover Weekly" />
+                <h3>Phép màu</h3>
+                <p>Nguyễn Hùng</p>
+              </div>
+              <div class="card">
+                <img src="/spotify/pm.png" alt="Discover Weekly" />
+                <h3>Phép màu</h3>
+                <p>Nguyễn Hùng</p>
+              </div>
+
               <!-- thêm các card khác -->
             </div>
           </section>
@@ -139,9 +198,19 @@
                 <p>buitruonglinh</p>
               </div>
               <div class="card">
-                <img src="/spotify/pm.png" alt="Phép Màu" />
-                <h3>Phép Màu</h3>
-                <p>MAYDAYs, Minh Tốc & Lam</p>
+                <img src="/spotify/tnnmm.png" alt="Từng Ngày Như Mãi Mãi" />
+                <h3>Từng Ngày Như Mãi Mãi</h3>
+                <p>buitruonglinh</p>
+              </div>
+              <div class="card">
+                <img src="/spotify/tnnmm.png" alt="Từng Ngày Như Mãi Mãi" />
+                <h3>Từng Ngày Như Mãi Mãi</h3>
+                <p>buitruonglinh</p>
+              </div>
+              <div class="card">
+                <img src="/spotify/tnnmm.png" alt="Từng Ngày Như Mãi Mãi" />
+                <h3>Từng Ngày Như Mãi Mãi</h3>
+                <p>buitruonglinh</p>
               </div>
               <!-- thêm các card khác -->
             </div>
@@ -157,20 +226,16 @@
             <h3>Liked Songs</h3>
             <img src="/spotify/pm.png" alt="Album cover" class="cover" />
           </div>
-
-          <!-- Switch to video -->
-          <div class="switch-video">
-            <button>Switch to video</button>
+          <div class="section">
+            <h3>Liked Songs</h3>
+            <img src="/spotify/pm.png" alt="Album cover" class="cover" />
           </div>
-
-          <!-- Current track info -->
-          <div class="track-info">
-            <h4>Phép màu <span class="verified"></span></h4>
-            <p>Nguyễn Hùng</p>
+          <div class="section">
+            <h3>Liked Songs</h3>
+            <img src="/spotify/pm.png" alt="Album cover" class="cover" />
           </div>
         </aside>
       </aside>
-      <!-- footer ------------------------------------------------------------------------------------------------------------------------------->
     </div>
   </body>
 </html>

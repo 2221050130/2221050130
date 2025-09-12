@@ -31,6 +31,7 @@ body {
   padding: 15px;
   overflow-y: auto;
   overflow-x: hidden;
+  
 }
 
 /* Header */
@@ -58,17 +59,16 @@ body {
   color: #b3b3b3;
 }
 .sidebar {
-  background-color: #1b1a1a;
+  background-color: #2b2a2a;
 }
 .main-content {
-  background-color: #1b1a1a;
+  background-color: #2b2a2a;
 }
 .rightbar {
-  background-color: #1b1a1a;
+  background-color: #2b2a2a;
+  height: 100%;
 }
-.app-header {
-  background-color: #1b1a1a;
-}
+
 /* Sidebar */
 .sidebar-header {
   display: flex;
@@ -190,28 +190,48 @@ body {
 }
 
 /* Horizontal scroll section */
-.horizontal-scroll {
+/* Container ngang */
+.horizontal-playlists {
   display: flex;
-  gap: 12px;
-  margin-bottom: 30px;
-  overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
+  flex-wrap: wrap; /* Cho xuống dòng khi hết chỗ */
+  gap: 12px; /* Khoảng cách giữa các card */
+  margin-bottom: 20px;
 }
-.horizontal-scroll::-webkit-scrollbar {
-  display: none; /* Chrome */
-}
-.horizontal-scroll .card {
-  min-width: 150px;
-  background: #181818;
-  padding: 10px;
+
+/* Playlist card */
+.playlist-card {
+  display: flex;
+  align-items: center;
+  background: #000;
   border-radius: 8px;
-  text-align: center;
+  padding: 6px 12px;
+  cursor: pointer;
+  min-width: 180px; /* Để đều kích thước */
+  max-width: 220px;
+  flex: 1 1 calc(25% - 12px); /* 4 cột trong 1 hàng */
+  transition: background 0.2s;
+}
+
+.playlist-card:hover {
+  background: #3a3a3a;
+}
+
+/* Ảnh playlist */
+.playlist-card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+/* Tên playlist */
+.playlist-card span {
+  font-size: 14px;
+  font-weight: 500;
   color: #fff;
-}
-.horizontal-scroll .card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Section */
@@ -325,4 +345,49 @@ body {
 }
 ::-webkit-scrollbar-track {
   background: transparent;
+}
+.trinhphat {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: #181818;
+  border-top: 1px solid #282828;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: #fff;
+  z-index: 1000;
+}
+/* Bên trái */
+.trinhphat-trai {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 25%;
+}
+.trinhphat-trai img {
+  width: 50px;
+}
+.trinhphat-trai .cover {
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+}
+.baidangphat {
+  display: flex;
+  flex-direction: column;
+}
+.tenbaihat {
+  font-size: 14px;
+  font-weight: 600;
+}
+.tennghesi {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+.trinhphat-giua{
+  dis
 }
