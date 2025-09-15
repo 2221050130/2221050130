@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background-color: rgb(195, 195, 195);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.hop-chinh {
+  text-align: center;
+}
+.logo {
+  color: blue;
+  font-size: 50px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.hop-dangky {
+  background-color: #fff;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  text-align: left;
+}
+.hop-dangky h2 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.hop-dangky p {
+  text-align: center;
+  font-size: 12px;
+  color: #606770;
+  padding-bottom: 20px;
+}
+.dang-nhap {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.dong-nhap input,
+.dong-nhap select,
+.hop-dangky input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccd0d5;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.gioi-tinh {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.chinh-sach {
+  font-size: 12px;
+  color: #606770;
+  margin: 10px 0;
+}
+
+.chinh-sach a {
+  color: #1877f2;
+  text-decoration: none;
+}
+.link-dangnhap {
+  font-size: 12px;
+  color: #606770;
+  margin: 10px 0;
+}
+.link-dangnhap a {
+  text-decoration: none;
+  color: #1877f2;
+}
+.nut-dangky {
+}
+.nut-dangky {
+  background: #42b72a;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.nut-dangky:hover {
+  background: #36a420;
+}

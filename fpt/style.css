@@ -20,16 +20,8 @@ body {
   background: black; /* header đen */
 }
 
-.logo-bieu-tuong {
-  width: 150px; /* kích thước khung logo */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo-bieu-tuong img {
-  width: 100%; /* ảnh co theo khung */
+img {
+  width: 10%; /* ảnh co theo khung */
   height: 100%;
   object-fit: contain; /* giữ tỉ lệ ảnh, không bị méo */
 }
