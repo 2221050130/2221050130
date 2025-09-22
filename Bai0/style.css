@@ -1,0 +1,26 @@
+.content {
+  width: 60%; /* Hoặc % tùy ý */
+  margin: 0 auto; /* Tự động căn giữa */
+  background: #ccc; /* Màu nền demo */
+  padding: 20px;
+}
+.header {
+  position: relative; /* Cho phép phần tử con absolute */
+  background: green; /* Màu nền demo */
+  height: 120px; /* Đặt chiều cao */
+}
+
+.picture {
+  height: 100%;
+}
+
+.searchbar {
+  position: absolute; /* Đè lên */
+  top: 20px; /* cách trên */
+  right: 20px; /* cách phải */
+  width: 300px;
+  height: 40px;
+  background: yellow;
+  border: none;
+  padding: 5px;
+}

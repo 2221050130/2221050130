@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 7</title>
+  </head>
+  <body>
+    <script src="scrip.j"></script>
+    <script>
+      //để viết chú thích
+      document.writeln("hello world" + "<br>");
+      //khai báo biến
+      let HoTen = "Do Thanh Nam";
+      document.writeln(HoTen + "<br>");
+      //khai báo hằng
+      const pi = 3.14;
+
+      let SoThuNhat = 10;
+      //   let SoThuHai = 5;
+      let ketQua = 0;
+
+      KetQua = +SoThuNhat + +SoThuHai;
+
+      SoThuNhat -= SoThuHai;
+      //SoThuNhat=SoThuNhat-SoThuHai
+
+      document.writeln(SoThuNhat);
+
+      let thongTinSinhVien = {
+        hoTen: "Do Thanh Nam",
+        tuoi: 21,
+        gioiTinh: true,
+        lop: "khoahocmaytinh",
+      };
+
+      // Thêm thuộc tính diachi (không dùng let nữa)
+      thongTinSinhVien.diachi = {
+        soNha: "39",
+        tenDuong: "Đường Cầu Vồng",
+      };
+
+      let namnay = 2025;
+
+      document.writeln(
+        "Xin chào bạn " +
+          thongTinSinhVien.hoTen +
+          " lớp " +
+          thongTinSinhVien.lop +
+          " số nhà " +
+          thongTinSinhVien.diachi.soNha +
+          " năm sinh " +
+          (namnay - thongTinSinhVien.tuoi)
+      );
+
+      let SoThuHai = "10";
+      parseInt(SoThuHai);
+      document.writeln(typeof SoThuHai);
+    </script>
+  </body>
+</html>

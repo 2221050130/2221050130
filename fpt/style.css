@@ -13,11 +13,15 @@ body {
 
 /* ===== HEADER ===== */
 .thanh-tren {
+  padding: 12px 40px;
+  background: black; /* header đen */
+}
+.thanhtrengiua {
+  width: 80%; /* Hoặc % tùy ý */
+  margin: 0 auto; /* Tự động căn giữa */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 40px;
-  background: black; /* header đen */
 }
 
 img {
