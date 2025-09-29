@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let donHang = {
+        maDonHang: "2221050130",
+        thongTinKhachHang: {
+          hoTen: "DoThanhNam",
+          soDienThoai: "0862831885",
+          trangThaiThanhVien: true,
+        },
+        danhSachSanPham: {
+          caPhe: {
+            tenSanPham: "Cà phê",
+            maSanPham: "100103",
+            soLuong: 5,
+            giaTien: 20,
+          },
+          matcha: {
+            tenSanPham: "Matcha",
+            maSanPham: "100104",
+            soLuong: 4,
+            giaTien: 25,
+          },
+          traSua: {
+            tenSanPham: "Trà sữa",
+            maSanPham: "100105",
+            soLuong: 5,
+            giaTien: 25,
+          },
+        },
+        trangThaiThanhToan: true,
+        diaChiGiaoHang: "85 Lê Văn Hiến",
+      };
+      tongTienCaPhe =
+        donHang.danhSachSanPham.caPhe.soLuong *
+        donHang.danhSachSanPham.caPhe.giaTien;
+      tongTienMatcha =
+        donHang.danhSachSanPham.matcha.soLuong *
+        donHang.danhSachSanPham.matcha.giaTien;
+      tongTienTraSua =
+        donHang.danhSachSanPham.traSua.soLuong *
+        donHang.danhSachSanPham.traSua.giaTien;
+      tongTien = tongTienCaPhe + tongTienMatcha + tongTienTraSua;
+      document.writeln("Tổng giá trị đơn hàng: " + tongTien);
+
+      //STRING
+      let hoTen = "Nguyen Thi Thuy";
+      document.writeln(hoTen.length);
+
+      //
+      let myString = "Hello Thuy";
+      document.writeln(myString[0]);
+
+      //Cắt chuỗi
+      document.writeln(myString.slice(1, 4));
+
+      //Thay thế chuỗi
+      document.writeln(myString.replace("Hello", "Hi"));
+
+      //Chuyển đổi chữ hoa/chữ thường: .toUpperCase() và toLowerCase
+      document.writeln(myString.toLocaleLowerCase());
+
+      //Kí tự Tìm kiếm chuối : phương thức .indexOf()  có: vị trí, không:-1
+      //và includes('kí tự cần tìm kiếm') True/False
+      document.writeln(myString.indexOf("i"));
+      document.writeln(myString.includes("e"));
+
+      //Tách chuỗi thành mảng split
+      document.writeln(myString.split("e"));
+
+      //Kiểm tra chuỗi
+      document.writeln(myString.startsWith("Thuy"));
+
+      //Thuộc tính Number: toFixed() số thập phân
+      var pi = 3.14159;
+      document.writeln(pi.toFixed(2));
+
+      //tách chuỗi thành mảng
+      document.writeln(isNaN("10")); //BTVN
+
+      //Hàm Date
+      //let toDay = new Date();
+      //document.writeln(toDay);
+      let toDay = new Date("2023-09-26");
+      document.writeln(toDay);
+
+      //Lấy ra năm : getFullYear
+      //Lấy ra tháng: getMonth
+      //Lấy ngày
+      document.writeln(toDay.getFullYear());
+      document.writeln(toDay.getMonth()); //tính bắt đầu từ tháng 0
+      document.writeln(toDay.getDate());
+      document.writeln(toDay.getDay()); //tính thứ bắt đầu từ CN là 0
+      document.writeln(toDay.getSeconds());
+
+      //   let so = 1000000000000000001;
+      //   let socuoi = parseInt(so[so.length - 1]);
+
+      //   if (so % 2 == 0) {
+      //     document.writeln(so + "là số chẵn");
+      //   } else {
+      //     document.writeln(so + "là số lẻ");
+      //   }
+
+      //   let a, b, c, d;
+      //   a = [1, 2, 3];
+      //   b = "javascript";
+      //   c = [42, "JS"];
+      //   d = a.concat(b, c);
+      //   document.writeln(d);
+
+      //   //mảng
+      //   let arr = [1, 2, 3, 4, "a", "b", "c", 2, 3];
+      //   document.writeln(arr.lastIndexOf(3));
+      //   //   document.writeln(arr.indexOf(3));
+
+      //   //   document.writeln(arr[2]);
+      //   //   document.writeln(arr.length);
+
+      let now = new Date().getHours();
+      //   5->10: chào buổi sáng
+      //   10->13: chào buổi trưa
+      //   13->17: chào buổi chiều
+      //   17->22: chào buổi tối
+
+      if (now >= 5 && now < 10) {
+        document.writeln("chào buổi sáng");
+      } else if (now >= 10 && now < 13) {
+        document.writeln("chào buổi trưa");
+      } else if (now >= 13 && now < 17) {
+        document.writeln("chào buổi chiều");
+      } else if (now >= 17 && now < 22) {
+        document.writeln("chào buổi tối");
+      } else {
+        document.writeln("chúc ngủ ngon");
+      }
+
+      let;
+    </script>
+  </body>
+</html>
