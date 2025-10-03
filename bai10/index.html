@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 10</title>
+  </head>
+  <body>
+    <script>
+      //   let a = 10;
+      //   let b = 7;
+      //   let c = 6;
+
+      //   if (a > 10 || b > 10 || c > 10 || a < 0 || b < 0 || c < 0) {
+      //     document.writeln("Điểm không hợp lệ");
+      //   }
+
+      //   let tong = a * 0.6 + b * 0.3 + c * 0.1;
+
+      //   if (tong >= 8 && tong <= 10) {
+      //     document.writeln("Điểm A");
+      //   } else if (tong >= 7 && tong < 8) {
+      //     document.writeln("Điểm B");
+      //   } else if (tong >= 5 && tong < 7) {
+      //     document.writeln("Điểm C");
+      //   } else if (tong >= 4 && tong < 5) {
+      //     document.writeln("Điểm D");
+      //   } else if (tong >= 0 && tong < 4) {
+      //     document.writeln("Điểm F");
+      //   }
+      //   let d = new Date(); // Tạo đối tượng ngày giờ hiện tại
+      //   let theDay = 0;
+
+      //   switch (theDay) {
+      //     case 5:
+      //       document.writeln("Finally Friday"); // Nếu theDay = 5 → Thứ Sáu
+      //       break;
+      //     case 6:
+      //       document.writeln("Super Saturday"); // Nếu theDay = 6 → Thứ Bảy
+      //       break;
+      //     case 0:
+      //       document.writeln("Sleepy Sunday"); // Nếu theDay = 0 → Chủ Nhật
+      //       break;
+      //     case 1:
+      //     case 2:
+      //     case 3:
+      //       document.writeln("I'm looking forward to this"); // Thứ Hai, Ba, Tư
+      //       break;
+      //     default:
+      //       document.writeln("I'm looking forward to this"); // Mặc định các ngày khác
+      //   }
+      //   let danhsach = ["Đỗ Thành Nam", "Nam Thành Đỗ"]; // khai báo mảng
+
+      //   for (let i = 0; i < danhsach.length; i++) {
+      //     document.writeln(i + ": " + danhsach[i] + " Hello");
+      //   }
+      //   let danhSach = [
+      //     "Dương Trần Nhật Anh ",
+      //     "Dương Vũ Anh ",
+      //     "Trần Vũ Hải Anh ",
+      //     "Bùi Ngọc Bích ",
+      //     "Phạm Quốc Bình ",
+      //     "Nguyễn Văn Chung ",
+      //     "Hoàng Mạnh Cường ",
+      //     "Ngô Hoàng Dương ",
+      //     "Phạm Văn Đại ",
+      //     "Nguyễn Đình Đạt ",
+      //     "Phạm Đức ",
+      //     "Vũ Trung Đức ",
+      //     "Phạm Hương Giang ",
+      //     "Phạm Quang Hậu ",
+      //     "Trần Văn Hiệp ",
+      //     "Nguyễn Văn Hoàng ",
+      //     "Phạm Quốc Hoàng ",
+      //     "Phạm Thị Huế ",
+      //     "Trần Công Hùng ",
+      //     "Đào Thế Huy ",
+      //     "Đỗ Quang Huy ",
+      //     "Phạm Quang Huy ",
+      //     "Phạm Thành Khang ",
+      //     "Bùi Văn Khiêm ",
+      //     "Nguyễn Tiến Khởi ",
+      //     "Đỗ Trung Kiên ",
+      //     "Vương Hà Linh ",
+      //     "Đào Quang Lộc ",
+      //     "Ngô Gia Lộc ",
+      //     "Bùi Văn Mạnh ",
+      //     "Nguyễn Văn Mạnh ",
+      //     "Phan Văn Mạnh ",
+      //     "Trương Công Minh ",
+      //     "Đỗ Thành Nam ",
+      //     "Lê Duy Nam ",
+      //     "Nguyễn Hoàng Nam ",
+      //     "Nguyễn Anh Quân ",
+      //     "Cao Thị Thu Quyên ",
+      //     "Phạm Gia Tài ",
+      //     "Nguyễn Thị Thanh Tâm ",
+      //     "Nguyễn Đình Thái ",
+      //     "Lưu Tiến Thành ",
+      //     "Trần Văn Thành ",
+      //     "Nguyễn Thị Thúy ",
+      //     "Nguyễn Thị Thúy ",
+      //     "Bùi Duy Tiến ",
+      //     "Nguyễn Văn Tiến ",
+      //     "Đỗ Văn Trung ",
+      //     "Phạm Đan Trường ",
+      //     "Lê Thị Cẩm Tú ",
+      //     "Phan Văn Tuân ",
+      //     "Cao Thái Tuấn ",
+      //     "Nguyễn Duy Tuấn ",
+      //     "Nguyễn Huy Tuấn ",
+      //     "Thiều Văn Việt ",
+      //     "Nguyễn Kiều Vy",
+      //   ];
+
+      //   let demNguyen = 0;
+
+      //   for (let i = 0; i < danhSach.length; i++) {
+      //     // Xóa khoảng trắng thừa, rồi kiểm tra có bắt đầu bằng "Nguyễn"
+      //     if (danhSach[i].trim().startsWith("Nguyễn")) {
+      //       demNguyen++;
+      //     }
+      //   }
+
+      //   document.writeln("Số người họ Nguyễn là: " + demNguyen);
+      //   let result = confirm("press button");
+      //   if (result == true) {
+      //     document.writeln("ấn OK");
+      //   } else {
+      //     document.writeln("ấn Camcel");
+      //   }
+      let ten = prompt("Nhập họ tên", "Ví dụ ABC");
+      let namsinh = prompt("Nhập năm sinh", "Ví dụ 2004");
+      function sayhello2(ten, namsinh) {
+        document.writeln("Xin chào" + ten + namsinh);
+      }
+    </script>
+  </body>
+</html>
