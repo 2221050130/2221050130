@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tính tổng</h1>
+    <div>
+      Nhập số thứ nhất:
+      <input type="text" id="soThuNhat" />
+    </div>
+    <div>
+      Nhập số thứ hai:
+      <input type="text" id="soThuHai" />
+    </div>
+    <div>
+      <button onclick="tinhTong()">Tính tổng</button>
+    </div>
+    <div>
+      Kết quả:
+      <input type="number" id="ketQua" class="ket-qua" readonly />
+    </div>
+
+    <script>
+      function tinhTong() {
+        let soThuNhat = Number(document.getElementById("soThuNhat").value);
+        let soThuHai = Number(document.getElementById("soThuHai").value);
+        let canhBao = "";
+        // Kiểm tra nhập liệu
+        if (soThuNhat === "") {
+          canhBao += "Vui lòng nhập số thứ nhất";
+        }
+        if (soThuHai === "") {
+          canhBao += "Vui lòng nhập số thứ hai";
+        }
+
+        if (canhBao) {
+          alert(canhBao);
+        }
+
+        let tong = soThuNhat + soThuHai;
+        document.getElementById("ketQua").value = tong;
+      }
+    </script>
+  </body>
+</html>

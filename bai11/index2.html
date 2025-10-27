@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tính điểm chữ</title>
+    <style>
+      input {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tính điểm chữ</h1>
+    <p><b>Điểm:</b> A * 0.6 + B * 0.3 + C * 0.1</p>
+
+    <label>Nhập vào điểm A</label>
+    <input type="number" id="diemA" step="any" />
+
+    <label>Nhập vào điểm B</label>
+    <input type="number" id="diemB" step="any" />
+
+    <label>Nhập vào điểm C</label>
+    <input type="number" id="diemC" step="any" />
+
+    <button onclick="tinhDiem()">Tính điểm chữ</button>
+
+    <p><b>Kết quả:</b></p>
+    <input type="text" id="ketQua" readonly />
+
+    <script>
+      function tinhDiem() {
+        let A = Number(document.getElementById("diemA").value);
+        let B = Number(document.getElementById("diemB").value);
+        let C = Number(document.getElementById("diemC").value);
+
+        let diemChu = A * 0.6 + B * 0.3 + C * 0.1;
+        document.getElementById("ketQua").value = diemChu.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

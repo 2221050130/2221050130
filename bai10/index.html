@@ -129,11 +129,15 @@
       //   } else {
       //     document.writeln("ấn Camcel");
       //   }
-      let ten = prompt("Nhập họ tên", "Ví dụ ABC");
-      let namsinh = prompt("Nhập năm sinh", "Ví dụ 2004");
+      let ten = prompt("Nhập họ tên", "Ví dụ: ABC");
+      let namsinh = prompt("Nhập năm sinh", "Ví dụ: 2004");
+
       function sayhello2(ten, namsinh) {
-        document.writeln("Xin chào" + ten + namsinh);
+        let tuoi = new Date().getFullYear() - Number(namsinh);
+        document.writeln("Xin chào " + ten + ". Sinh năm " + tuoi);
       }
+      // Gọi hàm
+      sayhello2(ten, namsinh);
     </script>
   </body>
 </html>
