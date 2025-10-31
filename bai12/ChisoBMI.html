@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính chỉ số BMI</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      #anhBMI {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tính chỉ số BMI</h1>
+    <p><b>Công thức:</b> Cân nặng / (Chiều cao * Chiều cao)</p>
+    <p>Cân nặng (Kg)</p>
+    <input
+      type="number"
+      id="canNang"
+      class="input-box"
+      placeholder="Nhập cân nặng (kg)"
+    />
+    <p>Chiều cao (m)</p>
+    <input
+      type="number"
+      id="chieuCao"
+      class="input-box"
+      placeholder="Nhập chiều cao (m)"
+      step="0.01"
+    />
+    <br /><br />
+    <button onclick="tinhBMI()">Kiểm tra chỉ số BMI</button>
+
+    <div id="ketqua"></div>
+    <img id="anhBMI" src="" alt="Kết quả BMI" />
+
+    <script>
+      function tinhBMI() {
+        let canNang = parseFloat(document.getElementById("canNang").value);
+        let chieuCao = parseFloat(document.getElementById("chieuCao").value);
+        let ketqua = document.getElementById("ketqua");
+        let anh = document.getElementById("anhBMI");
+
+        // Tính BMI
+        let bmi = canNang / (chieuCao * chieuCao);
+        let loai = "";
+
+        if (bmi < 18.5) {
+          loai = "Thiếu cân";
+          anh.src = "thieu.jpg"; // hình <18.5
+        } else if (bmi < 25) {
+          loai = "Bình thường";
+          anh.src = "binhthuong.jpg"; // hình 18.5–24.9
+        } else if (bmi < 30) {
+          loai = "Thừa cân";
+          anh.src = "thuacan.jpg"; // hình 25–29.9
+        } else if (bmi < 40) {
+          loai = "Béo phì cấp độ 1-2";
+          anh.src = "beophi12.jpg"; // hình 30–39.9
+        } else {
+          loai = "Béo phì nặng";
+          anh.src = "beophinang.jpg"; // hình >40
+        }
+
+        ketqua.innerHTML = `Chỉ số BMI của bạn là: <b>${bmi.toFixed(
+          1
+        )}</b> (${loai})`;
+      }
+    </script>
+  </body>
+</html>

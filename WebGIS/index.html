@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebGIS Quản lý Cây xanh THCS Nam Trung Yên</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🌳 Quản lý Cây xanh Trường THCS Nam Trung Yên</h1>
+
+  <div id="toolbar">
+    <button id="btn-add">➕ Thêm cây</button>
+    <button id="btn-export">💾 Xuất CSV</button>
+    <input type="file" id="file-input" accept=".csv" style="display:none;">
+    <button id="btn-import">📂 Nhập CSV</button>
+  </div>
+
+  <div class="container">
+    <div id="sidebar">
+      <h2>Danh sách cây</h2>
+      <ul id="tree-list"></ul>
+    </div>
+    <div id="map"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

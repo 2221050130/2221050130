@@ -24,25 +24,15 @@
     </div>
 
     <script>
-      function tinhTong() {
+      function tinhToan(phepTinh) {
         let soThuNhat = Number(document.getElementById("soThuNhat").value);
         let soThuHai = Number(document.getElementById("soThuHai").value);
         let canhBao = "";
-        // Kiểm tra nhập liệu
-        if (soThuNhat === "") {
-          canhBao += "Vui lòng nhập số thứ nhất";
-        }
-        if (soThuHai === "") {
-          canhBao += "Vui lòng nhập số thứ hai";
-        }
+        let ketQua=0;
 
-        if (canhBao) {
-          alert(canhBao);
+        if (phepTinh=='cong'){
+          ketQua=soThuNhat+soThuHai
         }
-
-        let tong = soThuNhat + soThuHai;
-        document.getElementById("ketQua").value = tong;
-      }
     </script>
   </body>
 </html>

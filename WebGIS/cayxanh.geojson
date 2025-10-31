@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [105.788045, 21.013812] },
+      "properties": {
+        "ten_cay": "Phượng vĩ 1",
+        "trang_thai": "Tốt",
+        "ghi_chu": "Cây khỏe mạnh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [105.788150, 21.013850] },
+      "properties": {
+        "ten_cay": "Bằng lăng 2",
+        "trang_thai": "Cần chăm sóc",
+        "ghi_chu": "Lá hơi vàng"
+      }
+    }
+  ]
+}
