@@ -1,0 +1,393 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+/* Toàn bộ app */
+.spotify-app {
+  display: grid;
+  grid-template-columns: 250px 1fr 300px; /* sidebar - main - rightbar */
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  gap: 10px; /* khoảng cách giữa các phần */
+  padding: 10px; /* viền ngoài */
+}
+
+/* Các khối chung (header, sidebar, main, rightbar) */
+.app-header,
+.sidebar,
+.main-content,
+.rightbar {
+  background-color: #121212;
+  border-radius: 10px;
+  padding: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+}
+
+/* Header */
+.app-header {
+  grid-column: 1 / span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #282828;
+}
+
+/* Ô tìm kiếm trên header */
+.global-search {
+  width: 40%;
+  max-width: 500px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #242424;
+  color: #fff;
+}
+.global-search::placeholder {
+  color: #b3b3b3;
+}
+.sidebar {
+  background-color: #2b2a2a;
+}
+.main-content {
+  background-color: #2b2a2a;
+}
+.rightbar {
+  background-color: #2b2a2a;
+  height: 100%;
+}
+
+/* Sidebar */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.sidebar-header h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.create-btn {
+  background: #1db954;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 12px;
+}
+.create-btn:hover {
+  background: #1ed760;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.tabs button {
+  background: #222;
+  border: none;
+  color: #b3b3b3;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.tabs button:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* Tools */
+.sidebar-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.search-box {
+  flex: 1;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+}
+.recents {
+  font-size: 12px;
+  color: #b3b3b3;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.recents:hover {
+  color: #fff;
+}
+
+/* Playlist items */
+.playlist-list {
+  list-style: none;
+}
+.playlist-list li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.playlist-list li:hover {
+  background: #1e1e1e;
+}
+.playlist-list img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.playlist-list .title {
+  font-size: 14px;
+  color: #fff;
+}
+.playlist-list .subtitle {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+/* Filter tabs */
+.filter-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.filter-tabs button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #2a2a2a;
+  color: #b3b3b3;
+  cursor: pointer;
+  font-size: 13px;
+}
+.filter-tabs button.active,
+.filter-tabs button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Horizontal scroll section */
+/* Container ngang */
+.horizontal-playlists {
+  display: flex;
+  flex-wrap: wrap; /* Cho xuống dòng khi hết chỗ */
+  gap: 12px; /* Khoảng cách giữa các card */
+  margin-bottom: 20px;
+}
+
+/* Playlist card */
+.playlist-card {
+  display: flex;
+  align-items: center;
+  background: #000;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  min-width: 180px; /* Để đều kích thước */
+  max-width: 220px;
+  flex: 1 1 calc(25% - 12px); /* 4 cột trong 1 hàng */
+  transition: background 0.2s;
+}
+
+.playlist-card:hover {
+  background: #3a3a3a;
+}
+
+/* Ảnh playlist */
+.playlist-card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+/* Tên playlist */
+.playlist-card span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Section */
+.section {
+  margin-bottom: 30px;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.section-header h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.section-header a {
+  color: #b3b3b3;
+  font-size: 13px;
+  text-decoration: none;
+}
+.section-header a:hover {
+  text-decoration: underline;
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #181818;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.card:hover {
+  background: #282828;
+}
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.card h3 {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.card p {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+/* Rightbar */
+.rightbar h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.rightbar .cover {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+.switch-video button {
+  width: 100%;
+  background: #2a2a2a;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.switch-video button:hover {
+  background: #3a3a3a;
+}
+.track-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.track-info h4 .verified {
+  color: #1db954;
+  font-size: 14px;
+}
+.track-info p {
+  font-size: 13px;
+  color: #b3b3b3;
+  margin-top: 4px;
+}
+
+/* Thanh cuộn gọn gàng */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.trinhphat {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: #181818;
+  border-top: 1px solid #282828;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: #fff;
+  z-index: 1000;
+}
+/* Bên trái */
+.trinhphat-trai {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 25%;
+}
+.trinhphat-trai img {
+  width: 50px;
+}
+.trinhphat-trai .cover {
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+}
+.baidangphat {
+  display: flex;
+  flex-direction: column;
+}
+.tenbaihat {
+  font-size: 14px;
+  font-weight: 600;
+}
+.tennghesi {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+.trinhphat-giua{
+  dis
+}
